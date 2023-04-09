@@ -22,5 +22,5 @@ int main()
 	cout << "deref age:" << pRags->GetAge() << endl;// invalid pointer
 
 	pRags->SetAge(4);
-	cout << "deref age:" << pRags->GetAge() 
+	cout << "deref age:" << pRags->GetAge();
 }
