@@ -23,16 +23,23 @@ int main()
 		okay = input;
 		switch (input)
 		{
-		case 0: 
+		case 0:
 			break;
-		case 1: 
+		case 1:
 			pCondition = new Normal;
 			delete pCondition;
 			break;
-		case 2:
+		case 2: {
 			pCondition = new FireAlarm;
+
+			Alarm* pAlarm = dynamic_cast<Alarm*>(pCondition);
+			if (pAlarm != nullptr) {
+				pAlarm->Call();
+			}
+
 			delete pCondition;
-			break;
+		}
+			  break;
 		default:
 			pCondition = new Error;
 			delete pCondition;
